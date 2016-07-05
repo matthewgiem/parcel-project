@@ -1,0 +1,42 @@
+<form action='/result' method='get'>
+  <div class="form-group">
+    <label>Units?</label>
+    <div class="radio">
+      <label><input checked id="inches" type="radio" name="unit" value=true>Inches</label>
+    </div>
+    <div class="radio">
+      <label><input id="centimeters" type="radio" name="unit" value=false>Centimeters</label>
+    </div>
+    <br>
+    <label>Length:</label>
+    <input required id="length" name="length" class="form-control" type="number">
+    <br>
+    <label>Width:</label>
+    <input required id="width" name="width" class="form-control" type="number">
+    <br>
+    <label>Height:</label>
+    <input required id="height" name="height" class="form-control" type="number">
+    <br>
+    <label>Weight:</label>
+    <input required id="weight" name="weight" class="form-control" type="number">
+    <br>
+    <label>Distance?</label>
+    <div class="radio">
+      <label><input checked id="domestic" type="radio" name="distance" value=0>Domestic</label>
+    </div>
+    <div class="radio">
+      <label><input id="international" type="radio" name="distance" value=20>International</label>
+    </div>
+    <br>
+    <label>Speed?</label>
+    <div class="radio">
+      <label><input checked id="standard" type="radio" name="speed" value=0>Standard</label>
+    </div>
+    <div class="radio">
+      <label><input id="express" type="radio" name="speed" value=20>Express</label>
+    </div>
+    <br>
+
+  </div>
+  <button type="submit" class="btn btn-lg btn-success">Submit</button>
+</form>

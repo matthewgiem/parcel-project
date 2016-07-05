@@ -29,11 +29,11 @@ class Parcel
   end
 
   define_method(:cost_to_ship) do
-    price = ""
-    if @length * @width * @height > 200 && @unit == true || @length/2.54 * @width/2.54 * @height/2.54 > 200 && @unit == false
+    price = 0
+    if @length.to_f * @width.to_f * @height.to_f > 200 && @unit == true || @length.to_f/2.54 * @width.to_f/2.54 * @height.to_f/2.54 > 200 && @unit == false
       price = "your package is too large to ship"
     elsif
-      price = ((@weight/2.00) * (@distance + @speed + self.volume()))
+      price = ((@weight.to_f/2.00) * (@distance.to_f + @speed.to_f + self.volume()))
       price = '%.2f'%price
     end
     price
