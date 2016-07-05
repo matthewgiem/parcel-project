@@ -13,7 +13,7 @@ class Parcel
 
   define_method(:volume) do
     volume = 0
-    if @unit == false
+    if @unit == "false"
       volume = @length/2.54 * @width/2.54 * @height/2.54
     else
       volume = @length * @width * @height
@@ -30,7 +30,7 @@ class Parcel
 
   define_method(:cost_to_ship) do
     price = 0
-    if @length.to_f * @width.to_f * @height.to_f > 200 && @unit == true || @length.to_f/2.54 * @width.to_f/2.54 * @height.to_f/2.54 > 200 && @unit == false
+    if @length.to_f * @width.to_f * @height.to_f > 200 && @unit == "true" || @length.to_f/2.54 * @width.to_f/2.54 * @height.to_f/2.54 > 200 && @unit == "false"
       price = "your package is too large to ship"
     elsif
       price = ((@weight.to_f/2.00) * (@distance.to_f + @speed.to_f + self.volume()))
